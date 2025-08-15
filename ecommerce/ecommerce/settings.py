@@ -76,6 +76,10 @@ AUTH_USER_MODEL = 'accounts.Account'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+#Media files
+MEDIA_URL='/media/'
+MEDIA_ROOT=BASE_DIR /'media'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
