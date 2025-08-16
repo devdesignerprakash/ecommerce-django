@@ -3,6 +3,17 @@
 {% block content %}
 <section class="section-content padding-y bg">
   <div class="container">
+    {% if not cart_items %}
+    <div class="container d-flex justify-content-center align-items-center" style="height:70vh;">
+    <div class="text-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" 
+           alt="Empty Cart" width="150" class="mb-4">
+      <h3>Your cart is empty!</h3>
+      <p class="text-muted">Looks like you haven’t added anything yet.</p>
+      <a href="{%url 'store' %}" class="btn btn-primary mt-3">Continue Shopping</a>
+    </div>
+  </div>
+    {% else %}
     <!-- ============================ COMPONENT 1 ================================= -->
     <div class="row">
       <aside class="col-lg-9">
@@ -113,6 +124,7 @@
     </div>
     <!-- row.// -->
     <!-- ============================ COMPONENT 1 END .// ================================= -->
+     {% endif %}
   </div>
   <!-- container .//  -->
 </section>
